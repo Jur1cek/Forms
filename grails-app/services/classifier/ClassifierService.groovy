@@ -2,45 +2,52 @@ package classifier
 
 import grails.transaction.Transactional
 import groovyx.net.http.HTTPBuilder
+import groovyx.net.http.ParserRegistry
 
 import static com.xlson.groovycsv.CsvParser.parseCsv
-import groovyx.net.http.ParserRegistry
 
 @Transactional
 class ClassifierService {
 
-	void updateClassifiers() {
-		def http = new HTTPBuilder('http://ciselniky.portalvs.sk')
-		http.parser.'text/csv' = { resp ->
-			return parseCsv( new InputStreamReader( resp.entity.content,
-			ParserRegistry.getCharset( resp ) ), separator: ';' )
-		}
+    void updateClassifiers() {
+        def http = new HTTPBuilder('http://ciselniky.portalvs.sk')
+        http.parser.'text/csv' = { resp ->
+            return parseCsv(new InputStreamReader(resp.entity.content,
+                    ParserRegistry.getCharset(resp)), separator: ';')
+        }
 
-		for (classId in 1..14) {
-			updateClassifier(http, classId as String)
-		}
-	}
+        def classIds = ['university', 'faculty', 'workplace', 'field_of_study', 'degree', 'sp_language', 'study_program', 'study_form', 'study_level', 'sp_subject']
 
-	void updateClassifier(def http, String classId) {
-		http.get( path : "/classifier/download-utf/basic/$classId",
-		contentType : 'text/csv' ) { resp, csv ->
+        for (classId in classIds) {
+            updateClassifier(http, classId)
+        }
+    }
 
-			assert resp.statusLine.statusCode == 200
+    void updateClassifier(def http, String classId) {
+        http.get(path: "/classifier/download-utf/basic/$classId", query: [no_translate: 1, only_valid: 1],
+                contentType: 'text/csv') { resp, csv ->
 
-			def items = new HashMap()
-			for(line in csv) {
-				items.put(line.getAt("kód"), line.getAt("názov"))
-			}
+            assert resp.statusLine.statusCode == 200
+            assert csv.hasNext()
 
-			Classifier classifier = Classifier.findByClassId(classId)
+            Classifier classifier = Classifier.findByClassId(classId)
 
-			if (classifier) {
-				classifier.items = items;
-			} else {
-				classifier = new Classifier(name: classId, classId: classId, items: items)
-			}
+            if (classifier)
+                classifier.delete()
 
-			classifier.save()
-		}
-	}
+            classifier = new Classifier(name: classId, classId: classId)
+
+            for (line in csv) {
+                ClassifierLine classifierLine = new ClassifierLine();
+
+                for (column in line.columns) {
+                    classifierLine.addToClassifierItem(new ClassifierItem(name: column.key, value: line.values[column.value]))
+                }
+
+                classifier.addToLines(classifierLine);
+            }
+
+            classifier.save()
+        }
+    }
 }

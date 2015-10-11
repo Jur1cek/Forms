@@ -13,7 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="shortcut icon" href="${assetPath(src: 'favicon.ico')}" type="image/x-icon"/>
     <link rel="apple-touch-icon" href="${assetPath(src: 'apple-touch-icon.png')}"/>
-    <link rel="apple-touch-icon" s∂izes="114x114" href="${assetPath(src: 'apple-touch-icon-retina.png')}"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="${assetPath(src: 'apple-touch-icon-retina.png')}"/>
     <asset:stylesheet src="application.css"/>
     <asset:javascript src="application.js"/>
     <g:layoutHead/>
@@ -34,7 +34,8 @@
 
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li ${controllerName.equals('collation') ? 'class=active' : ''}><g:link title="Žiadosti">Žiadosti</g:link></li>
+                    <li ${controllerName.equals('collation') ? 'class=active' : ''}><g:link
+                            title="Žiadosti">Žiadosti</g:link></li>
                     <li ${controllerName.equals('form') && !actionName.equals('list_test') ? 'class=active' : ''}><g:link
                             controller="form"
                             action="index"

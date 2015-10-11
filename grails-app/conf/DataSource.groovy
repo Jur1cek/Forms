@@ -21,7 +21,7 @@ environments {
 	development {
 		dataSource {
 			dbCreate = "create-drop" // one of 'create', 'create-drop', 'update', 'validate', ''
-			url = "jdbc:mysql://192.168.56.102/dev?useUnicode=yes&characterEncoding=UTF-8"
+			url = "jdbc:mysql://localhost/dev?useUnicode=yes&characterEncoding=UTF-8"
 			properties {
                 // See http://grails.org/doc/latest/guide/conf.html#dataSource for documentation
                 jmxEnabled = true
@@ -47,7 +47,7 @@ environments {
 	test {
 		dataSource {
 			dbCreate = "update"
-			url = "jdbc:mysql://cloud1.jur1cek.eu/test?useUnicode=yes&characterEncoding=UTF-8"
+			url = "jdbc:mysql://localhost/test?useUnicode=yes&characterEncoding=UTF-8"
 		}
 	}
 	production {

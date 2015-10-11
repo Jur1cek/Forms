@@ -2,12 +2,12 @@ package classifier
 
 import grails.plugin.springsecurity.annotation.Secured
 
-@Secured(['ROLE_WORKER'])
+@Secured(['ROLE_ADMIN'])
 class ClassifierController {
-	def classifierService
+    def classifierService
 
     def updateAll() {
-		classifierService.updateClassifiers()
-		render "success"
-	}
+        classifierService.updateClassifiers()
+        render "success"
+    }
 }

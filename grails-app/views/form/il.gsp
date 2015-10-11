@@ -4,18 +4,6 @@
 <head>
     <meta name="layout" content="main">
     <title>Informačný list predmetu</title>
-    <script>
-        /*
-         setInterval(function() {
-         var form = $('#form');
-         var method = form.attr('method').toLowerCase(); // "get" or "post"
-         var action = form.attr('action') + "?autosave=true"; // url to submit to
-         $[method](action, form.serialize(), function(data) {
-         // Do something with the server response data
-         // Or at least let the user know it saved
-         });
-         }, 10000); // do it every 120 seconds*/
-    </script>
 </head>
 
 <body>
@@ -29,52 +17,17 @@
     <!--  -->
     <div class="input-group">
         <div class="input-group-addon">Vysoká škola</div>
-        <!--g:textField value="${form?.fieldsVersion?.getAt(version)?.fields?.form_vysoka_skola}" class="form-control" type="text" name="form_vysoka_skola" /--->
-        <g:if test="${actionName == 'create'}">
-            <g:if test="${user?.userProfile?.university}">
-                <g:select class="chosen-select form-control"
-                          value="${user?.userProfile?.university}"
-                          optionKey="value" optionValue="value" name="form_vysoka_skola"
-                          from="${Classifier.findByClassId(1).items}" multiselect="false" noSelection="[' ': ' ']"/>
-            </g:if>
-            <g:else>
-                <g:select class="chosen-select form-control"
-                          value="${form?.fieldsVersion?.getAt(version)?.fields?.form_vysoka_skola}"
-                          optionKey="value" optionValue="value" name="form_vysoka_skola"
-                          from="${Classifier.findByClassId(1).items}" multiselect="false" noSelection="[' ': ' ']"/>
-            </g:else>
-        </g:if>
-        <g:else>
-            <g:select class="chosen-select form-control"
-                      value="${form?.fieldsVersion?.getAt(version)?.fields?.form_vysoka_skola}"
-                      optionKey="value" optionValue="value" name="form_vysoka_skola"
-                      from="${Classifier.findByClassId(1).items}" multiselect="false" noSelection="[' ': ' ']"/>
-        </g:else>
+
+        <select class="chosen-select form-control" name="vysoka_skola" id="vysoka_skola">
+            <option value="">Vysoka skola</option>
+        </select>
     </div>
 
     <div class="input-group">
         <div class="input-group-addon">Fakulta</div>
-        <g:if test="${actionName == 'create'}">
-            <g:if test="${user?.userProfile?.faculty}">
-                <g:select class="chosen-select form-control"
-                          value="${user?.userProfile?.faculty}"
-                          optionKey="value" optionValue="value" name="form_fakulta"
-                          from="${Classifier.findByClassId(2).items}" multiselect="false" noSelection="[' ': ' ']"/>
-            </g:if>
-            <g:else>
-                <g:select class="chosen-select form-control"
-                          value="${form?.fieldsVersion?.getAt(version)?.fields?.form_fakulta}"
-                          optionKey="value" optionValue="value" name="form_fakulta"
-                          from="${Classifier.findByClassId(2).items}" multiselect="false" noSelection="[' ': ' ']"/>
-            </g:else>
-        </g:if>
-        <g:else>
-            <g:select class="chosen-select form-control"
-                      value="${form?.fieldsVersion?.getAt(version)?.fields?.form_fakulta}"
-                      optionKey="value" optionValue="value" name="form_fakulta"
-                      from="${Classifier.findByClassId(2).items}" multiselect="false" noSelection="[' ': ' ']"/>
-        </g:else>
-
+        <select class="chosen-select form-control" name="fakulta" id="fakulta">
+            <option value="">Fakulta</option>
+        </select>
     </div>
 
     <div class="input-group">
@@ -372,6 +325,39 @@
                 placeholder_text_single: "Vyberte si"
             }
     );
+    $.ajax({
+        type: "GET",
+        url: "/Forms/classifierLines/university",
+        contentType: "application/json",
+        dataType: "json",
+        success: function (item) {
+            $("#vysoka_skola").empty();
+            $.each(item, function () {
+                $("#vysoka_skola").append($("<option> </option>").val(this['value']).html(this['label']));
+            });
+            $("#vysoka_skola").trigger("chosen:updated");
+        }
+    });
+
+    $("#vysoka_skola").change(function () {
+        $.ajax({
+            type: "GET",
+            url: "/Forms/classifierLines/faculty",
+            data: {
+                name: 'university_code',
+                value: $("#vysoka_skola").val()
+            },
+            contentType: "application/json",
+            dataType: "json",
+            success: function (item) {
+                $("#fakulta").empty();
+                $.each(item, function () {
+                    $("#fakulta").append($("<option> </option>").val(this['value']).html(this['label']));
+                });
+                $("#fakulta").trigger("chosen:updated");
+            }
+        });
+    });
 });
 </script>
 </body>

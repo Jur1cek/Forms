@@ -122,22 +122,22 @@ class FormController {
 
                 if (form.type.shortcut == "VPCH") {
                     row1_label = 'I.1 Priezvisko, meno, tituly'
-                    row1_data = form?.fieldsVersion?.getAt(version)?.fields?.form_meno?.value
+                    row1_data = form?.fieldsVersion?.getAt(version)?.fields?.form_meno?.values
                     row2_label = 'I.2 Rok narodenia'
-                    row2_data = form?.fieldsVersion?.getAt(version)?.fields?.form_rok_narodenia?.value
+                    row2_data = form?.fieldsVersion?.getAt(version)?.fields?.form_rok_narodenia?.values
                     row3_label = 'I.3 Názov a adresa pracoviska'
-                    row3_data = form?.fieldsVersion?.getAt(version)?.fields?.form_pracovisko?.value
+                    row3_data = form?.fieldsVersion?.getAt(version)?.fields?.form_pracovisko?.values
                     row4_label = 'I.4 E-mailová adresa'
-                    row4_data = form?.fieldsVersion?.getAt(version)?.fields?.form_email?.value
+                    row4_data = form?.fieldsVersion?.getAt(version)?.fields?.form_email?.values
                 } else if (form.type.shortcut == "IL") {
                     row1_label = 'Vysoká škola'
-                    row1_data = form?.fieldsVersion?.getAt(version)?.fields?.form_vysoka_skola?.value
+                    row1_data = form?.fieldsVersion?.getAt(version)?.fields?.form_vysoka_skola?.values
                     row2_label = 'Fakulta'
-                    row2_data = form?.fieldsVersion?.getAt(version)?.fields?.form_fakulta?.value
+                    row2_data = form?.fieldsVersion?.getAt(version)?.fields?.form_fakulta?.values
                     row3_label = 'Kód predmetu'
-                    row3_data = form?.fieldsVersion?.getAt(version)?.fields?.form_kod_predmetu_1?.value
+                    row3_data = form?.fieldsVersion?.getAt(version)?.fields?.form_kod_predmetu_1?.values
                     row4_label = 'Názov predmetu'
-                    row4_data = form?.fieldsVersion?.getAt(version)?.fields?.form_nazov_predmetu_1?.value
+                    row4_data = form?.fieldsVersion?.getAt(version)?.fields?.form_nazov_predmetu_1?.values
                 }
 
                 def row = [:]

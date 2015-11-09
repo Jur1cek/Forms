@@ -3,9 +3,11 @@ package form
 import user.User
 
 class Comment {
+    Date dateCreated
+    Date lastUpdated
+
     User creator
     String text
-    Date date = new Date()
 
     static belongsTo = [form: Form]
 

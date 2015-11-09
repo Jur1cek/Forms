@@ -41,7 +41,7 @@ class ClassifierService {
                 ClassifierLine classifierLine = new ClassifierLine();
 
                 for (column in line.columns) {
-                    classifierLine.addToClassifierItem(new ClassifierItem(name: column.key, value: line.values[column.value]))
+                    classifierLine.addToClassifierItems(new ClassifierItem(name: column.key, value: line.values[column.value]))
                 }
 
                 classifier.addToLines(classifierLine);

@@ -9,7 +9,7 @@ import static org.springframework.http.HttpStatus.*
 @Transactional(readOnly = true)
 class ClassifierLineController {
 
-    static responseFormats = ['json']
+    static responseFormats = ['json', 'xml']
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE", show: ["GET", "POST"]]
 
     def index(Integer max) {
@@ -19,23 +19,35 @@ class ClassifierLineController {
 
     def show(String id) {
 
-        def criteria = ClassifierLine.createCriteria()
-        List<ClassifierLine> result = criteria.list(params) {
+        Map filterFields = params.findAll {
+            it.key.startsWith("filter_")
+        }
+
+        filterFields = filterFields.inject([:]) { map, v ->
+            map << [(v.key - "filter_"): v.value]
+        }
+
+        println(filterFields)
+
+        def c = ClassifierLine.createCriteria()
+        def results = c.list {
             classifier {
                 eq("classId", id)
             }
-            if (params.name) {
-                classifierItem {
-                    eq("name", params.name)
-                    eq("value", params.value)
+            filterFields.each { k, v ->
+                classifierItems {
+                    eq("name", k)
+                    eq("value", v)
                 }
             }
         }
 
+        def result = query.find();
+
         def resultNew = []
         for (classifierLine in result) {
             def lineNew = [:]
-            for (classifierItem in classifierLine.classifierItem) {
+            for (classifierItem in classifierLine.classifierItems) {
                 if (classifierItem.name == "code") {
                     lineNew.put("value", classifierItem.value)
                 } else if (classifierItem.name == "name") {

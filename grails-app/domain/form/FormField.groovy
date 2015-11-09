@@ -6,19 +6,26 @@ package form
 class FormField {
     static searchable = true
 
-    String id_classifier
-    String id_item
-    String value
+    Date dateCreated
+    Date lastUpdated
+
+    String name
+    List values
 
     static belongsTo = [fieldsVersion: FormFieldsVersion]
 
+    static hasMany = [values: FormFieldValue]
+
     static constraints = {
-        id_classifier nullable: true
-        id_item nullable: true
-        value nullable: true
+        values nullable: true
     }
 
     static mapping = {
-        value type: "text"
+    }
+
+    @Override
+    String toString() {
+        // TODO check
+        return values.toArray()
     }
 }

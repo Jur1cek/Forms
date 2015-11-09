@@ -5,13 +5,14 @@ import user.User
 class Form {
     static auditable = true
 
+    Date dateCreated
+    Date lastUpdated
+
     String name
     FormType type
     User creator
     List fieldsVersion = []
     List comments = []
-    Date creationDate = new Date()
-    Date updateDate = new Date()
     User updater
     ApprovalStatus status = ApprovalStatus.NONE
 

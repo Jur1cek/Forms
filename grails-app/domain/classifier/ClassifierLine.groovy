@@ -1,9 +1,9 @@
 package classifier
 
 class ClassifierLine {
-    List classifierItem
+    List classifierItems
 
-    static hasMany = [classifierItem: ClassifierItem]
+    static hasMany = [classifierItems: ClassifierItem]
     static belongsTo = [classifier: Classifier]
 
     static constraints = {

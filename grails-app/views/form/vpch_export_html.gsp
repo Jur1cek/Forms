@@ -102,7 +102,7 @@
                         class="st3">I.1 Priezvisko, meno, tituly</span></div></td>
             <td colspan="4"
                 style="vertical-align:top;width:219.5pt;border-left:solid 1pt #000000;border-top:solid 1pt #000000;border-right:solid 1.5pt #000000;border-bottom:solid 1pt #000000;padding:0pt 5.4pt 0pt 5.4pt;">
-                <div style="margin:0pt 0pt 0pt 0pt;line-height:normal;"><span class="st3-normal">${form?.fieldsVersion?.getAt(version)?.fields?.form_meno?.value}</span></div></td>
+                <div style="margin:0pt 0pt 0pt 0pt;line-height:normal;"><span class="st3-normal">${form?.fieldsVersion?.getAt(version)?.fields?.form_meno?.values}</span></div></td>
         </tr>
         <tr>
             <td colspan="4"
@@ -111,7 +111,7 @@
             </td>
             <td colspan="4"
                 style="vertical-align:top;width:219.5pt;border-left:solid 1pt #000000;border-top:solid 1pt #000000;border-right:solid 1.5pt #000000;border-bottom:solid 1pt #000000;padding:0pt 5.4pt 0pt 5.4pt;">
-                <div style="margin:0pt 0pt 0pt 0pt;line-height:normal;"><span class="st3-normal">${form?.fieldsVersion?.getAt(version)?.fields?.form_rok_narodenia?.value}</span></div></td>
+                <div style="margin:0pt 0pt 0pt 0pt;line-height:normal;"><span class="st3-normal">${form?.fieldsVersion?.getAt(version)?.fields?.form_rok_narodenia?.values}</span></div></td>
         </tr>
         <tr>
             <td colspan="4"
@@ -120,7 +120,7 @@
                         class="st3">I.3 N&aacute;zov a adresa pracoviska</span></div></td>
             <td colspan="4"
                 style="vertical-align:top;width:219.5pt;border-left:solid 1pt #000000;border-top:solid 1pt #000000;border-right:solid 1.5pt #000000;border-bottom:solid 1pt #000000;padding:0pt 5.4pt 0pt 5.4pt;">
-                <div style="margin:0pt 0pt 0pt 0pt;line-height:normal;"><span class="st3-normal">${form?.fieldsVersion?.getAt(version)?.fields?.form_pracovisko?.value}</span></div></td>
+                <div style="margin:0pt 0pt 0pt 0pt;line-height:normal;"><span class="st3-normal">${form?.fieldsVersion?.getAt(version)?.fields?.form_pracovisko?.values}</span></div></td>
         </tr>
         <tr>
             <td colspan="4"
@@ -129,7 +129,7 @@
                         class="st3">I.4 E-mailov&aacute; adresa:</span></div></td>
             <td colspan="4"
                 style="vertical-align:top;width:219.5pt;border-left:solid 1pt #000000;border-top:solid 1pt #000000;border-right:solid 1.5pt #000000;border-bottom:solid 1pt #000000;padding:0pt 5.4pt 0pt 5.4pt;">
-                <div style="margin:0pt 0pt 0pt 0pt;line-height:normal;"><span class="st3-normal">${form?.fieldsVersion?.getAt(version)?.fields?.form_email?.value}</span></div></td>
+                <div style="margin:0pt 0pt 0pt 0pt;line-height:normal;"><span class="st3-normal">${form?.fieldsVersion?.getAt(version)?.fields?.form_email?.values}</span></div></td>
         </tr>
         <tr>
             <td colspan="8"
@@ -159,11 +159,11 @@
                         class="st3">Vysoko&#353;kolsk&eacute; vzdelanie druh&eacute;ho stup&#328;a</span></div></td>
             <td colspan="4"
                 style="vertical-align:top;width:184.25pt;border:solid 1pt #000000;padding:0pt 5.4pt 0pt 5.4pt;">
-                <div style="margin:0pt 0pt 0pt 0pt;line-height:normal;"><span class="st3-normal">${form?.fieldsVersion?.getAt(version)?.fields?.form_nazov_vysokej_skoly?.value}</span></div></td>
+                <div style="margin:0pt 0pt 0pt 0pt;line-height:normal;"><span class="st3-normal">${form?.fieldsVersion?.getAt(version)?.fields?.form_nazov_vysokej_skoly?.values}</span></div></td>
             <td style="vertical-align:top;width:24.45pt;border:solid 1pt #000000;padding:0pt 5.4pt 0pt 5.4pt;">
-                <div style="margin:0pt 0pt 0pt 0pt;line-height:normal;"><span class="st3-normal">${form?.fieldsVersion?.getAt(version)?.fields?.form_rok?.value}</span></div></td>
+                <div style="margin:0pt 0pt 0pt 0pt;line-height:normal;"><span class="st3-normal">${form?.fieldsVersion?.getAt(version)?.fields?.form_rok?.values}</span></div></td>
             <td style="vertical-align:top;width:104.35pt;border-left:solid 1pt #000000;border-top:solid 1pt #000000;border-right:solid 1.5pt #000000;border-bottom:solid 1pt #000000;padding:0pt 5.4pt 0pt 5.4pt;">
-                <div style="margin:0pt 0pt 0pt 0pt;line-height:normal;"><span class="st3-normal">${form?.fieldsVersion?.getAt(version)?.fields?.form_odbor_a_program?.value}</span></div></td>
+                <div style="margin:0pt 0pt 0pt 0pt;line-height:normal;"><span class="st3-normal">${form?.fieldsVersion?.getAt(version)?.fields?.form_odbor_a_program?.values}</span></div></td>
         </tr>
         <tr>
             <td colspan="2"

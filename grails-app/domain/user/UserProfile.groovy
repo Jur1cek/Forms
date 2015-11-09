@@ -1,6 +1,10 @@
 package user
 
 class UserProfile {
+
+    Date dateCreated
+    Date lastUpdated
+
     String name
     String university
     String faculty

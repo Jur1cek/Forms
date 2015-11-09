@@ -2,16 +2,16 @@
 <formular>
     <vpch>
         <zakladne_udaje>
-            <meno>${form?.fieldsVersion?.getAt(version)?.fields?.form_meno?.value}</meno>
-            <rok_narodenia>${form?.fieldsVersion?.getAt(version)?.fields?.form_rok_narodenia?.value}</rok_narodenia>
-            <pracovisko>${form?.fieldsVersion?.getAt(version)?.fields?.form_pracovisko?.value}</pracovisko>
-            <email>${form?.fieldsVersion?.getAt(version)?.fields?.form_email?.value}</email>
+            <meno>${form?.fieldsVersion?.getAt(version)?.fields?.form_meno?.values}</meno>
+            <rok_narodenia>${form?.fieldsVersion?.getAt(version)?.fields?.form_rok_narodenia?.values}</rok_narodenia>
+            <pracovisko>${form?.fieldsVersion?.getAt(version)?.fields?.form_pracovisko?.values}</pracovisko>
+            <email>${form?.fieldsVersion?.getAt(version)?.fields?.form_email?.values}</email>
         </zakladne_udaje>
         <informacie_o_vs_vzdelani>
             <vs_vzdelanie_2_stupna>
-                <nazov_vysokej_skoly>${form?.fieldsVersion?.getAt(version)?.fields?.form_nazov_vysokej_skoly?.value}</nazov_vysokej_skoly>
-                <rok>${form?.fieldsVersion?.getAt(version)?.fields?.form_rok?.value}</rok>
-                <odbor_a_program>${form?.fieldsVersion?.getAt(version)?.fields?.form_odbor_a_program?.value}</odbor_a_program>
+                <nazov_vysokej_skoly>${form?.fieldsVersion?.getAt(version)?.fields?.form_nazov_vysokej_skoly?.values}</nazov_vysokej_skoly>
+                <rok>${form?.fieldsVersion?.getAt(version)?.fields?.form_rok?.values}</rok>
+                <odbor_a_program>${form?.fieldsVersion?.getAt(version)?.fields?.form_odbor_a_program?.values}</odbor_a_program>
             </vs_vzdelanie_2_stupna>
             <vs_vzdelanie_3_stupna>
                 <nazov_vysokej_skoly/>

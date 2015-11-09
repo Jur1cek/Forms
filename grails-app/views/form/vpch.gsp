@@ -51,7 +51,7 @@
         <div class="panel-body">
             <div class="input-group">
                 <div class="input-group-addon">I.1 Priezvisko, meno, tituly</div>
-                <g:textField value="${form?.fieldsVersion?.getAt(version)?.fields?.form_meno?.value}"
+                <g:textField value="${form?.fieldsVersion?.getAt(version)?.fields?.form_meno?.values}"
                              class="form-control"
                              type="text"
                              name="form_meno" required=""/>
@@ -59,21 +59,21 @@
 
             <div class="input-group">
                 <div class="input-group-addon">I.2 Rok narodenia</div>
-                <g:textField value="${form?.fieldsVersion?.getAt(version)?.fields?.form_rok_narodenia?.value}"
+                <g:textField value="${form?.fieldsVersion?.getAt(version)?.fields?.form_rok_narodenia?.values}"
                              class="form-control"
                              type="text" name="form_rok_narodenia" required=""/>
             </div>
 
             <div class="input-group">
                 <div class="input-group-addon">I.3 Názov a adresa pracoviska</div>
-                <g:textField value="${form?.fieldsVersion?.getAt(version)?.fields?.form_pracovisko?.value}"
+                <g:textField value="${form?.fieldsVersion?.getAt(version)?.fields?.form_pracovisko?.values}"
                              class="form-control"
                              type="text" name="form_pracovisko"/>
             </div>
 
             <div class="input-group">
                 <div class="input-group-addon">I.4 E-mailová adresa</div>
-                <g:textField value="${form?.fieldsVersion?.getAt(version)?.fields?.form_email?.value}"
+                <g:textField value="${form?.fieldsVersion?.getAt(version)?.fields?.form_email?.values}"
                              class="form-control"
                              type="text" name="form_email"/>
             </div>
@@ -95,20 +95,20 @@
                     <div class="input-group">
                         <div class="input-group-addon">Názov vysokej školy alebo inštitúcie</div>
                         <g:textField
-                                value="${form?.fieldsVersion?.getAt(version)?.fields?.form_nazov_vysokej_skoly?.value}"
+                                value="${form?.fieldsVersion?.getAt(version)?.fields?.form_nazov_vysokej_skoly?.values}"
                                 class="form-control" type="text" name="form_nazov_vysokej_skoly"/>
                     </div>
 
                     <div class="input-group">
                         <div class="input-group-addon">Rok</div>
-                        <g:textField value="${form?.fieldsVersion?.getAt(version)?.fields?.form_rok?.value}"
+                        <g:textField value="${form?.fieldsVersion?.getAt(version)?.fields?.form_rok?.values}"
                                      class="form-control"
                                      type="text" name="form_rok"/>
                     </div>
 
                     <div class="input-group">
                         <div class="input-group-addon">Odbor a program</div>
-                        <g:textField value="${form?.fieldsVersion?.getAt(version)?.fields?.form_odbor_a_program?.value}"
+                        <g:textField value="${form?.fieldsVersion?.getAt(version)?.fields?.form_odbor_a_program?.values}"
                                      class="form-control" type="text" name="form_odbor_a_program"/>
                     </div>
                 </div>
@@ -123,13 +123,13 @@
                     <div class="input-group">
                         <div class="input-group-addon">Názov vysokej školy alebo inštitúcie</div>
                         <g:textField
-                                value="${form?.fieldsVersion?.getAt(version)?.fields?.form_nazov_vysokej_skoly_2?.value}"
+                                value="${form?.fieldsVersion?.getAt(version)?.fields?.form_nazov_vysokej_skoly_2?.values}"
                                 class="form-control" type="text" name="form_nazov_vysokej_skoly_2"/>
                     </div>
 
                     <div class="input-group">
                         <div class="input-group-addon">Rok</div>
-                        <g:textField value="${form?.fieldsVersion?.getAt(version)?.fields?.form_rok_2?.value}"
+                        <g:textField value="${form?.fieldsVersion?.getAt(version)?.fields?.form_rok_2?.values}"
                                      class="form-control"
                                      type="text" name="form_rok_2"/>
                     </div>
@@ -137,7 +137,7 @@
                     <div class="input-group">
                         <div class="input-group-addon">Odbor a program</div>
                         <g:textField
-                                value="${form?.fieldsVersion?.getAt(version)?.fields?.form_odbor_a_program_2?.value}"
+                                value="${form?.fieldsVersion?.getAt(version)?.fields?.form_odbor_a_program_2?.values}"
                                 class="form-control" type="text" name="form_odbor_a_program_2"/>
                     </div>
                 </div>
@@ -152,13 +152,13 @@
                     <div class="input-group">
                         <div class="input-group-addon">Názov vysokej školy alebo inštitúcie</div>
                         <g:textField
-                                value="${form?.fieldsVersion?.getAt(version)?.fields?.form_nazov_vysokej_skoly_3?.value}"
+                                value="${form?.fieldsVersion?.getAt(version)?.fields?.form_nazov_vysokej_skoly_3?.values}"
                                 class="form-control" type="text" name="form_nazov_vysokej_skoly_3"/>
                     </div>
 
                     <div class="input-group">
                         <div class="input-group-addon">Rok</div>
-                        <g:textField value="${form?.fieldsVersion?.getAt(version)?.fields?.form_rok_3?.value}"
+                        <g:textField value="${form?.fieldsVersion?.getAt(version)?.fields?.form_rok_3?.values}"
                                      class="form-control"
                                      type="text" name="form_rok_3"/>
                     </div>
@@ -166,7 +166,7 @@
                     <div class="input-group">
                         <div class="input-group-addon">Odbor a program</div>
                         <g:textField
-                                value="${form?.fieldsVersion?.getAt(version)?.fields?.form_odbor_a_program_3?.value}"
+                                value="${form?.fieldsVersion?.getAt(version)?.fields?.form_odbor_a_program_3?.values}"
                                 class="form-control" type="text" name="form_odbor_a_program_3"/>
                     </div>
                 </div>
@@ -181,13 +181,13 @@
                     <div class="input-group">
                         <div class="input-group-addon">Názov vysokej školy alebo inštitúcie</div>
                         <g:textField
-                                value="${form?.fieldsVersion?.getAt(version)?.fields?.form_nazov_vysokej_skoly_4?.value}"
+                                value="${form?.fieldsVersion?.getAt(version)?.fields?.form_nazov_vysokej_skoly_4?.values}"
                                 class="form-control" type="text" name="form_nazov_vysokej_skoly_4"/>
                     </div>
 
                     <div class="input-group">
                         <div class="input-group-addon">Rok</div>
-                        <g:textField value="${form?.fieldsVersion?.getAt(version)?.fields?.form_rok_4?.value}"
+                        <g:textField value="${form?.fieldsVersion?.getAt(version)?.fields?.form_rok_4?.values}"
                                      class="form-control"
                                      type="text" name="form_rok_4"/>
                     </div>
@@ -195,7 +195,7 @@
                     <div class="input-group">
                         <div class="input-group-addon">Odbor a program</div>
                         <g:textField
-                                value="${form?.fieldsVersion?.getAt(version)?.fields?.form_odbor_a_program_4?.value}"
+                                value="${form?.fieldsVersion?.getAt(version)?.fields?.form_odbor_a_program_4?.values}"
                                 class="form-control" type="text" name="form_odbor_a_program_4"/>
                     </div>
                 </div>
@@ -210,13 +210,13 @@
                     <div class="input-group">
                         <div class="input-group-addon">Názov vysokej školy alebo inštitúcie</div>
                         <g:textField
-                                value="${form?.fieldsVersion?.getAt(version)?.fields?.form_nazov_vysokej_skoly_5?.value}"
+                                value="${form?.fieldsVersion?.getAt(version)?.fields?.form_nazov_vysokej_skoly_5?.values}"
                                 class="form-control" type="text" name="form_nazov_vysokej_skoly_5"/>
                     </div>
 
                     <div class="input-group">
                         <div class="input-group-addon">Rok</div>
-                        <g:textField value="${form?.fieldsVersion?.getAt(version)?.fields?.form_rok_5?.value}"
+                        <g:textField value="${form?.fieldsVersion?.getAt(version)?.fields?.form_rok_5?.values}"
                                      class="form-control"
                                      type="text" name="form_rok_5"/>
                     </div>
@@ -224,7 +224,7 @@
                     <div class="input-group">
                         <div class="input-group-addon">Odbor a program</div>
                         <g:textField
-                                value="${form?.fieldsVersion?.getAt(version)?.fields?.form_odbor_a_program_5?.value}"
+                                value="${form?.fieldsVersion?.getAt(version)?.fields?.form_odbor_a_program_5?.values}"
                                 class="form-control" type="text" name="form_odbor_a_program_5"/>
                     </div>
                 </div>
@@ -239,13 +239,13 @@
                     <div class="input-group">
                         <div class="input-group-addon">Názov vysokej školy alebo inštitúcie</div>
                         <g:textField
-                                value="${form?.fieldsVersion?.getAt(version)?.fields?.form_nazov_vysokej_skoly_6?.value}"
+                                value="${form?.fieldsVersion?.getAt(version)?.fields?.form_nazov_vysokej_skoly_6?.values}"
                                 class="form-control" type="text" name="form_nazov_vysokej_skoly_6"/>
                     </div>
 
                     <div class="input-group">
                         <div class="input-group-addon">Rok</div>
-                        <g:textField value="${form?.fieldsVersion?.getAt(version)?.fields?.form_rok_6?.value}"
+                        <g:textField value="${form?.fieldsVersion?.getAt(version)?.fields?.form_rok_6?.values}"
                                      class="form-control"
                                      type="text" name="form_rok_6"/>
                     </div>
@@ -253,7 +253,7 @@
                     <div class="input-group">
                         <div class="input-group-addon">Odbor a program</div>
                         <g:textField
-                                value="${form?.fieldsVersion?.getAt(version)?.fields?.form_odbor_a_program_6?.value}"
+                                value="${form?.fieldsVersion?.getAt(version)?.fields?.form_odbor_a_program_6?.values}"
                                 class="form-control" type="text" name="form_odbor_a_program_6"/>
                     </div>
                 </div>
@@ -276,21 +276,21 @@
                     <div class="input-group">
                         <div class="input-group-addon">Bakalárske práce - Počet</div>
                         <g:textField
-                                value="${form?.fieldsVersion?.getAt(version)?.fields?.form_pocet_vedenych_dizertacnych_prac?.value}"
+                                value="${form?.fieldsVersion?.getAt(version)?.fields?.form_pocet_vedenych_dizertacnych_prac?.values}"
                                 class="form-control" type="text" name="form_pocet_vedenych_bakalarskych_prac"/>
                     </div>
 
                     <div class="input-group">
                         <div class="input-group-addon">Diplomové práce - Počet</div>
                         <g:textField
-                                value="${form?.fieldsVersion?.getAt(version)?.fields?.form_pocet_vedenych_diplomovych_prac?.value}"
+                                value="${form?.fieldsVersion?.getAt(version)?.fields?.form_pocet_vedenych_diplomovych_prac?.values}"
                                 class="form-control" type="text" name="form_pocet_vedenych_diplomovych_prac"/>
                     </div>
 
                     <div class="input-group">
                         <div class="input-group-addon">Dizertačné práce - Počet</div>
                         <g:textField
-                                value="${form?.fieldsVersion?.getAt(version)?.fields?.form_pocet_vedenych_dizertacnych_prac?.value}"
+                                value="${form?.fieldsVersion?.getAt(version)?.fields?.form_pocet_vedenych_dizertacnych_prac?.values}"
                                 class="form-control" type="text" name="form_pocet_vedenych_dizertacnych_prac"/>
                     </div>
                 </div>
@@ -305,35 +305,35 @@
                     <div class="input-group">
                         <div class="input-group-addon">Pedagogická činnosť</div>
                         <g:textField
-                                value="${form?.fieldsVersion?.getAt(version)?.fields?.form_pedagogicka_cinnost?.value}"
+                                value="${form?.fieldsVersion?.getAt(version)?.fields?.form_pedagogicka_cinnost?.values}"
                                 class="form-control" type="text" name="form_pedagogicka_cinnost"/>
                     </div>
 
                     <div class="input-group">
                         <div class="input-group-addon">Pedagogická činnosť</div>
                         <g:textField
-                                value="${form?.fieldsVersion?.getAt(version)?.fields?.form_pedagogicka_cinnost_2?.value}"
+                                value="${form?.fieldsVersion?.getAt(version)?.fields?.form_pedagogicka_cinnost_2?.values}"
                                 class="form-control" type="text" name="form_pedagogicka_cinnost_2"/>
                     </div>
 
                     <div class="input-group">
                         <div class="input-group-addon">Pedagogická činnosť</div>
                         <g:textField
-                                value="${form?.fieldsVersion?.getAt(version)?.fields?.form_pedagogicka_cinnost_3?.value}"
+                                value="${form?.fieldsVersion?.getAt(version)?.fields?.form_pedagogicka_cinnost_3?.values}"
                                 class="form-control" type="text" name="form_pedagogicka_cinnost_3"/>
                     </div>
 
                     <div class="input-group">
                         <div class="input-group-addon">Pedagogická činnosť</div>
                         <g:textField
-                                value="${form?.fieldsVersion?.getAt(version)?.fields?.form_pedagogicka_cinnost_4?.value}"
+                                value="${form?.fieldsVersion?.getAt(version)?.fields?.form_pedagogicka_cinnost_4?.values}"
                                 class="form-control" type="text" name="form_pedagogicka_cinnost_4"/>
                     </div>
 
                     <div class="input-group">
                         <div class="input-group-addon">Pedagogická činnosť</div>
                         <g:textField
-                                value="${form?.fieldsVersion?.getAt(version)?.fields?.form_pedagogicka_cinnost_5?.value}"
+                                value="${form?.fieldsVersion?.getAt(version)?.fields?.form_pedagogicka_cinnost_5?.values}"
                                 class="form-control" type="text" name="form_pedagogicka_cinnost_5"/>
                     </div>
                 </div>
@@ -348,35 +348,35 @@
                     <div class="input-group">
                         <div class="input-group-addon">Pedagogická činnosť</div>
                         <g:textField
-                                value="${form?.fieldsVersion?.getAt(version)?.fields?.form_pedagogicka_cinnost_6?.value}"
+                                value="${form?.fieldsVersion?.getAt(version)?.fields?.form_pedagogicka_cinnost_6?.values}"
                                 class="form-control" type="text" name="form_pedagogicka_cinnost_6"/>
                     </div>
 
                     <div class="input-group">
                         <div class="input-group-addon">Pedagogická činnosť</div>
                         <g:textField
-                                value="${form?.fieldsVersion?.getAt(version)?.fields?.form_pedagogicka_cinnost_7?.value}"
+                                value="${form?.fieldsVersion?.getAt(version)?.fields?.form_pedagogicka_cinnost_7?.values}"
                                 class="form-control" type="text" name="form_pedagogicka_cinnost_7"/>
                     </div>
 
                     <div class="input-group">
                         <div class="input-group-addon">Pedagogická činnosť</div>
                         <g:textField
-                                value="${form?.fieldsVersion?.getAt(version)?.fields?.form_pedagogicka_cinnost_8?.value}"
+                                value="${form?.fieldsVersion?.getAt(version)?.fields?.form_pedagogicka_cinnost_8?.values}"
                                 class="form-control" type="text" name="form_pedagogicka_cinnost_8"/>
                     </div>
 
                     <div class="input-group">
                         <div class="input-group-addon">Pedagogická činnosť</div>
                         <g:textField
-                                value="${form?.fieldsVersion?.getAt(version)?.fields?.form_pedagogicka_cinnost_9?.value}"
+                                value="${form?.fieldsVersion?.getAt(version)?.fields?.form_pedagogicka_cinnost_9?.values}"
                                 class="form-control" type="text" name="form_pedagogicka_cinnost_9"/>
                     </div>
 
                     <div class="input-group">
                         <div class="input-group-addon">Pedagogická činnosť</div>
                         <g:textField
-                                value="${form?.fieldsVersion?.getAt(version)?.fields?.form_pedagogicka_cinnost_10?.value}"
+                                value="${form?.fieldsVersion?.getAt(version)?.fields?.form_pedagogicka_cinnost_10?.values}"
                                 class="form-control" type="text" name="form_pedagogicka_cinnost_10"/>
                     </div>
                 </div>
@@ -390,35 +390,35 @@
                 <div class="panel-body">
                     <div class="input-group">
                         <div class="input-group-addon">Tvorivá činnosť</div>
-                        <g:textField value="${form?.fieldsVersion?.getAt(version)?.fields?.form_tvoriva_cinnost?.value}"
+                        <g:textField value="${form?.fieldsVersion?.getAt(version)?.fields?.form_tvoriva_cinnost?.values}"
                                      class="form-control" type="text" name="form_tvoriva_cinnost"/>
                     </div>
 
                     <div class="input-group">
                         <div class="input-group-addon">Tvorivá činnosť</div>
                         <g:textField
-                                value="${form?.fieldsVersion?.getAt(version)?.fields?.form_tvoriva_cinnost_2?.value}"
+                                value="${form?.fieldsVersion?.getAt(version)?.fields?.form_tvoriva_cinnost_2?.values}"
                                 class="form-control" type="text" name="form_tvoriva_cinnost_2"/>
                     </div>
 
                     <div class="input-group">
                         <div class="input-group-addon">Tvorivá činnosť</div>
                         <g:textField
-                                value="${form?.fieldsVersion?.getAt(version)?.fields?.form_tvoriva_cinnost_3?.value}"
+                                value="${form?.fieldsVersion?.getAt(version)?.fields?.form_tvoriva_cinnost_3?.values}"
                                 class="form-control" type="text" name="form_tvoriva_cinnost_3"/>
                     </div>
 
                     <div class="input-group">
                         <div class="input-group-addon">Tvorivá činnosť</div>
                         <g:textField
-                                value="${form?.fieldsVersion?.getAt(version)?.fields?.form_tvoriva_cinnost_4?.value}"
+                                value="${form?.fieldsVersion?.getAt(version)?.fields?.form_tvoriva_cinnost_4?.values}"
                                 class="form-control" type="text" name="form_tvoriva_cinnost_4"/>
                     </div>
 
                     <div class="input-group">
                         <div class="input-group-addon">Tvorivá činnosť</div>
                         <g:textField
-                                value="${form?.fieldsVersion?.getAt(version)?.fields?.form_tvoriva_cinnost_5?.value}"
+                                value="${form?.fieldsVersion?.getAt(version)?.fields?.form_tvoriva_cinnost_5?.values}"
                                 class="form-control" type="text" name="form_tvoriva_cinnost_5"/>
                     </div>
                 </div>
@@ -446,14 +446,14 @@
                         <div class="panel-body">
                             <div class="input-group">
                                 <div class="input-group-addon">Celkovo</div>
-                                <g:textField value="${form?.fieldsVersion?.getAt(version)?.fields?.form_celkovo?.value}"
+                                <g:textField value="${form?.fieldsVersion?.getAt(version)?.fields?.form_celkovo?.values}"
                                              class="form-control" type="text" name="form_celkovo"/>
                             </div>
 
                             <div class="input-group">
                                 <div class="input-group-addon">Za posledných šesť rokov</div>
                                 <g:textField
-                                        value="${form?.fieldsVersion?.getAt(version)?.fields?.form_za_6_rokov?.value}"
+                                        value="${form?.fieldsVersion?.getAt(version)?.fields?.form_za_6_rokov?.values}"
                                         class="form-control" type="text" name="form_za_6_rokov"/>
                             </div>
                         </div>
@@ -468,14 +468,14 @@
                             <div class="input-group">
                                 <div class="input-group-addon">Celkovo</div>
                                 <g:textField
-                                        value="${form?.fieldsVersion?.getAt(version)?.fields?.form_celkovo_2?.value}"
+                                        value="${form?.fieldsVersion?.getAt(version)?.fields?.form_celkovo_2?.values}"
                                         class="form-control" type="text" name="form_celkovo_2"/>
                             </div>
 
                             <div class="input-group">
                                 <div class="input-group-addon">Za posledných šesť rokov</div>
                                 <g:textField
-                                        value="${form?.fieldsVersion?.getAt(version)?.fields?.form_za_6_rokov_2?.value}"
+                                        value="${form?.fieldsVersion?.getAt(version)?.fields?.form_za_6_rokov_2?.values}"
                                         class="form-control" type="text" name="form_za_6_rokov_2"/>
                             </div>
                         </div>
@@ -490,14 +490,14 @@
                             <div class="input-group">
                                 <div class="input-group-addon">Celkovo</div>
                                 <g:textField
-                                        value="${form?.fieldsVersion?.getAt(version)?.fields?.form_celkovo_3?.value}"
+                                        value="${form?.fieldsVersion?.getAt(version)?.fields?.form_celkovo_3?.values}"
                                         class="form-control" type="text" name="form_celkovo_3"/>
                             </div>
 
                             <div class="input-group">
                                 <div class="input-group-addon">Za posledných šesť rokov</div>
                                 <g:textField
-                                        value="${form?.fieldsVersion?.getAt(version)?.fields?.form_za_6_rokov_3?.value}"
+                                        value="${form?.fieldsVersion?.getAt(version)?.fields?.form_za_6_rokov_3?.values}"
                                         class="form-control" type="text" name="form_za_6_rokov_3"/>
                             </div>
                         </div>
@@ -512,14 +512,14 @@
                             <div class="input-group">
                                 <div class="input-group-addon">Celkovo</div>
                                 <g:textField
-                                        value="${form?.fieldsVersion?.getAt(version)?.fields?.form_celkovo_4?.value}"
+                                        value="${form?.fieldsVersion?.getAt(version)?.fields?.form_celkovo_4?.values}"
                                         class="form-control" type="text" name="form_celkovo_4"/>
                             </div>
 
                             <div class="input-group">
                                 <div class="input-group-addon">Za posledných šesť rokov</div>
                                 <g:textField
-                                        value="${form?.fieldsVersion?.getAt(version)?.fields?.form_za_6_rokov_4?.value}"
+                                        value="${form?.fieldsVersion?.getAt(version)?.fields?.form_za_6_rokov_4?.values}"
                                         class="form-control" type="text" name="form_za_6_rokov_4"/>
                             </div>
                         </div>
@@ -534,14 +534,14 @@
                             <div class="input-group">
                                 <div class="input-group-addon">Celkovo</div>
                                 <g:textField
-                                        value="${form?.fieldsVersion?.getAt(version)?.fields?.form_celkovo_5?.value}"
+                                        value="${form?.fieldsVersion?.getAt(version)?.fields?.form_celkovo_5?.values}"
                                         class="form-control" type="text" name="form_celkovo_5"/>
                             </div>
 
                             <div class="input-group">
                                 <div class="input-group-addon">Za posledných šesť rokov</div>
                                 <g:textField
-                                        value="${form?.fieldsVersion?.getAt(version)?.fields?.form_za_6_rokov_5?.value}"
+                                        value="${form?.fieldsVersion?.getAt(version)?.fields?.form_za_6_rokov_5?.values}"
                                         class="form-control" type="text" name="form_za_6_rokov_5"/>
                             </div>
                         </div>
@@ -556,14 +556,14 @@
                             <div class="input-group">
                                 <div class="input-group-addon">Celkovo</div>
                                 <g:textField
-                                        value="${form?.fieldsVersion?.getAt(version)?.fields?.form_celkovo_6?.value}"
+                                        value="${form?.fieldsVersion?.getAt(version)?.fields?.form_celkovo_6?.values}"
                                         class="form-control" type="text" name="form_celkovo_6"/>
                             </div>
 
                             <div class="input-group">
                                 <div class="input-group-addon">Za posledných šesť rokov</div>
                                 <g:textField
-                                        value="${form?.fieldsVersion?.getAt(version)?.fields?.form_za_6_rokov_6?.value}"
+                                        value="${form?.fieldsVersion?.getAt(version)?.fields?.form_za_6_rokov_6?.values}"
                                         class="form-control" type="text" name="form_za_6_rokov_6"/>
                             </div>
                         </div>
@@ -578,14 +578,14 @@
                             <div class="input-group">
                                 <div class="input-group-addon">Celkovo</div>
                                 <g:textField
-                                        value="${form?.fieldsVersion?.getAt(version)?.fields?.form_celkovo_7?.value}"
+                                        value="${form?.fieldsVersion?.getAt(version)?.fields?.form_celkovo_7?.values}"
                                         class="form-control" type="text" name="form_celkovo_7"/>
                             </div>
 
                             <div class="input-group">
                                 <div class="input-group-addon">Za posledných šesť rokov</div>
                                 <g:textField
-                                        value="${form?.fieldsVersion?.getAt(version)?.fields?.form_za_6_rokov_7?.value}"
+                                        value="${form?.fieldsVersion?.getAt(version)?.fields?.form_za_6_rokov_7?.values}"
                                         class="form-control" type="text" name="form_za_6_rokov_7"/>
                             </div>
                         </div>
@@ -602,35 +602,35 @@
                     <div class="input-group">
                         <div class="input-group-addon">Publikovaná práca</div>
                         <g:textField
-                                value="${form?.fieldsVersion?.getAt(version)?.fields?.form_publikovana_praca?.value}"
+                                value="${form?.fieldsVersion?.getAt(version)?.fields?.form_publikovana_praca?.values}"
                                 class="form-control" type="text" name="form_publikovana_praca"/>
                     </div>
 
                     <div class="input-group">
                         <div class="input-group-addon">Publikovaná práca</div>
                         <g:textField
-                                value="${form?.fieldsVersion?.getAt(version)?.fields?.form_publikovana_praca_2?.value}"
+                                value="${form?.fieldsVersion?.getAt(version)?.fields?.form_publikovana_praca_2?.values}"
                                 class="form-control" type="text" name="form_publikovana_praca_2"/>
                     </div>
 
                     <div class="input-group">
                         <div class="input-group-addon">Publikovaná práca</div>
                         <g:textField
-                                value="${form?.fieldsVersion?.getAt(version)?.fields?.form_publikovana_praca_3?.value}"
+                                value="${form?.fieldsVersion?.getAt(version)?.fields?.form_publikovana_praca_3?.values}"
                                 class="form-control" type="text" name="form_publikovana_praca_3"/>
                     </div>
 
                     <div class="input-group">
                         <div class="input-group-addon">Publikovaná práca</div>
                         <g:textField
-                                value="${form?.fieldsVersion?.getAt(version)?.fields?.form_publikovana_praca_4?.value}"
+                                value="${form?.fieldsVersion?.getAt(version)?.fields?.form_publikovana_praca_4?.values}"
                                 class="form-control" type="text" name="form_publikovana_praca_4"/>
                     </div>
 
                     <div class="input-group">
                         <div class="input-group-addon">Publikovaná práca</div>
                         <g:textField
-                                value="${form?.fieldsVersion?.getAt(version)?.fields?.form_publikovana_praca_5?.value}"
+                                value="${form?.fieldsVersion?.getAt(version)?.fields?.form_publikovana_praca_5?.values}"
                                 class="form-control" type="text" name="form_publikovana_praca_5"/>
                     </div>
                 </div>
@@ -645,35 +645,35 @@
                     <div class="input-group">
                         <div class="input-group-addon">Publikovaná práca</div>
                         <g:textField
-                                value="${form?.fieldsVersion?.getAt(version)?.fields?.form_publikovana_praca_6?.value}"
+                                value="${form?.fieldsVersion?.getAt(version)?.fields?.form_publikovana_praca_6?.values}"
                                 class="form-control" type="text" name="form_publikovana_praca_6"/>
                     </div>
 
                     <div class="input-group">
                         <div class="input-group-addon">Publikovaná práca</div>
                         <g:textField
-                                value="${form?.fieldsVersion?.getAt(version)?.fields?.form_publikovana_praca_7?.value}"
+                                value="${form?.fieldsVersion?.getAt(version)?.fields?.form_publikovana_praca_7?.values}"
                                 class="form-control" type="text" name="form_publikovana_praca_7"/>
                     </div>
 
                     <div class="input-group">
                         <div class="input-group-addon">Publikovaná práca</div>
                         <g:textField
-                                value="${form?.fieldsVersion?.getAt(version)?.fields?.form_publikovana_praca_8?.value}"
+                                value="${form?.fieldsVersion?.getAt(version)?.fields?.form_publikovana_praca_8?.values}"
                                 class="form-control" type="text" name="form_publikovana_praca_8"/>
                     </div>
 
                     <div class="input-group">
                         <div class="input-group-addon">Publikovaná práca</div>
                         <g:textField
-                                value="${form?.fieldsVersion?.getAt(version)?.fields?.form_publikovana_praca_9?.value}"
+                                value="${form?.fieldsVersion?.getAt(version)?.fields?.form_publikovana_praca_9?.values}"
                                 class="form-control" type="text" name="form_publikovana_praca_9"/>
                     </div>
 
                     <div class="input-group">
                         <div class="input-group-addon">Publikovaná práca</div>
                         <g:textField
-                                value="${form?.fieldsVersion?.getAt(version)?.fields?.form_publikovana_praca_10?.value}"
+                                value="${form?.fieldsVersion?.getAt(version)?.fields?.form_publikovana_praca_10?.values}"
                                 class="form-control" type="text" name="form_publikovana_praca_10"/>
                     </div>
                 </div>
@@ -687,32 +687,32 @@
                 <div class="panel-body">
                     <div class="input-group">
                         <div class="input-group-addon">Projekt</div>
-                        <g:textField value="${form?.fieldsVersion?.getAt(version)?.fields?.form_projekt?.value}"
+                        <g:textField value="${form?.fieldsVersion?.getAt(version)?.fields?.form_projekt?.values}"
                                      class="form-control"
                                      type="text" name="form_projekt"/>
                     </div>
 
                     <div class="input-group">
                         <div class="input-group-addon">Projekt</div>
-                        <g:textField value="${form?.fieldsVersion?.getAt(version)?.fields?.form_projekt_2?.value}"
+                        <g:textField value="${form?.fieldsVersion?.getAt(version)?.fields?.form_projekt_2?.values}"
                                      class="form-control" type="text" name="form_projekt_2"/>
                     </div>
 
                     <div class="input-group">
                         <div class="input-group-addon">Projekt</div>
-                        <g:textField value="${form?.fieldsVersion?.getAt(version)?.fields?.form_projekt_3?.value}"
+                        <g:textField value="${form?.fieldsVersion?.getAt(version)?.fields?.form_projekt_3?.values}"
                                      class="form-control" type="text" name="form_projekt_3"/>
                     </div>
 
                     <div class="input-group">
                         <div class="input-group-addon">Projekt</div>
-                        <g:textField value="${form?.fieldsVersion?.getAt(version)?.fields?.form_projekt_4?.value}"
+                        <g:textField value="${form?.fieldsVersion?.getAt(version)?.fields?.form_projekt_4?.values}"
                                      class="form-control" type="text" name="form_projekt_4"/>
                     </div>
 
                     <div class="input-group">
                         <div class="input-group-addon">Projekt</div>
-                        <g:textField value="${form?.fieldsVersion?.getAt(version)?.fields?.form_projekt_5?.value}"
+                        <g:textField value="${form?.fieldsVersion?.getAt(version)?.fields?.form_projekt_5?.values}"
                                      class="form-control" type="text" name="form_projekt_5"/>
                     </div>
                 </div>
@@ -732,7 +732,7 @@
                         <div class="panel-body">
                             <div class="input-group">
                                 <div class="input-group-addon">Výstup</div>
-                                <g:textField value="${form?.fieldsVersion?.getAt(version)?.fields?.form_vystup?.value}"
+                                <g:textField value="${form?.fieldsVersion?.getAt(version)?.fields?.form_vystup?.values}"
                                              class="form-control" type="text" name="form_vystup"/>
                             </div>
 
@@ -745,7 +745,7 @@
                                     <div class="input-group">
                                         <div class="input-group-addon">Ohlas na výstup</div>
                                         <g:textField
-                                                value="${form?.fieldsVersion?.getAt(version)?.fields?.form_ohlas_na_vystup?.value}"
+                                                value="${form?.fieldsVersion?.getAt(version)?.fields?.form_ohlas_na_vystup?.values}"
                                                 class="form-control" type="text" name="form_ohlas_na_vystup"/>
                                     </div>
                                 </div>
@@ -757,7 +757,7 @@
 
             <div class="input-group">
                 <div class="input-group-addon">IV.6 Funkcie a členstvo vo vedeckých, odborných a profesijných spoločnostiach</div>
-                <g:textArea value="${form?.fieldsVersion?.getAt(version)?.fields?.form_funkcie_a_clenstvo?.value}"
+                <g:textArea value="${form?.fieldsVersion?.getAt(version)?.fields?.form_funkcie_a_clenstvo?.values}"
                             class="form-control" name="form_funkcie_a_clenstvo"/>
             </div>
         </div>
@@ -771,13 +771,13 @@
         <div class="panel-body">
             <div class="input-group">
                 <div class="input-group-addon">V.1 Charakteristika aktivít súvisiacich s príslušným študijným programom</div>
-                <g:textArea value="${form?.fieldsVersion?.getAt(version)?.fields?.form_charakteristika_aktivit?.value}"
+                <g:textArea value="${form?.fieldsVersion?.getAt(version)?.fields?.form_charakteristika_aktivit?.values}"
                             class="form-control" name="form_charakteristika_aktivit"/>
             </div>
 
             <div class="input-group">
                 <div class="input-group-addon">V.2 Ďalšie aktivity</div>
-                <g:textArea value="${form?.fieldsVersion?.getAt(version)?.fields?.form_dalsie_aktivity?.value}"
+                <g:textArea value="${form?.fieldsVersion?.getAt(version)?.fields?.form_dalsie_aktivity?.values}"
                             class="form-control"
                             name="form_dalsie_aktivity"/>
             </div>

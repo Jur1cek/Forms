@@ -3,7 +3,9 @@ package form
 import user.User
 
 class FormFieldsVersion {
-    Date date = new Date()
+    Date dateCreated
+    Date lastUpdated
+
     User creator
     Map fields = [:]
 

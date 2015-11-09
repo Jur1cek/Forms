@@ -62,7 +62,7 @@ class FormService {
         def version = new FormFieldsVersion(creator: user);
         Map<String, FormField> fieldsC = [:]
         fields.each { key, value ->
-            fieldsC.put(key, new FormField(value: value, fieldsVersion: version))
+            fieldsC.put(key, new FormField(values: value, fieldsVersion: version))
         }
         version.fields = fieldsC
         form.addToFieldsVersion version
@@ -99,7 +99,7 @@ class FormService {
         def version = new FormFieldsVersion(creator: user);
         Map<String, FormField> fieldsC = [:]
         fields.each { key, value ->
-            fieldsC.put(key, new FormField(value: value, fieldsVersion: version))
+            fieldsC.put(key, new FormField(values: value, fieldsVersion: version))
         }
         version.fields = fieldsC
         form.addToFieldsVersion version

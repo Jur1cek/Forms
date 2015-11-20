@@ -17,7 +17,7 @@ class ClassifierLineController {
         respond ClassifierLine.list(params), [status: OK]
     }
 
-    def show(String id) {
+/*    def show(String id) {
 
         Map filterFields = params.findAll {
             it.key.startsWith("filter_")
@@ -52,6 +52,39 @@ class ClassifierLineController {
                     lineNew.put("value", classifierItem.value)
                 } else if (classifierItem.name == "name") {
                     lineNew.put("label", classifierItem.value)
+                }
+            }
+            resultNew << lineNew
+        }
+
+        respond resultNew
+    }*/
+
+    def show(String id) {
+
+        def criteria = ClassifierLine.createCriteria()
+        List<ClassifierLine> result = criteria.list(params) {
+            classifier {
+                eq("classId", id)
+            }
+            if (params.name) {
+                classifierItems {
+                    eq("name", params.name)
+                    eq("value", params.value)
+                }
+            }
+        }
+
+        def resultNew = []
+        for (classifierLine in result) {
+            def lineNew = [:]
+            for (ClassifierItem classifierItem in classifierLine.classifierItems) {
+                if (classifierItem.name == "code") {
+                    lineNew.put("value", classifierItem.value)
+                } else if (classifierItem.name == "name") {
+                    lineNew.put("label", classifierItem.value)
+                } else {
+                    lineNew.put(classifierItem.name, classifierItem.value)
                 }
             }
             resultNew << lineNew

@@ -18,14 +18,14 @@
     <div class="input-group">
         <div class="input-group-addon">Vysoká škola</div>
 
-        <select class="chosen-select form-control" name="vysoka_skola" id="vysoka_skola">
+        <select class="chosen-select form-control" name="form_vysoka_skola" id="form_vysoka_skola">
             <option value="">Vysoka skola</option>
         </select>
     </div>
 
     <div class="input-group">
         <div class="input-group-addon">Fakulta</div>
-        <select class="chosen-select form-control" name="fakulta" id="fakulta">
+        <select class="chosen-select form-control" name="form_fakulta" id="form_fakulta">
             <option value="">Fakulta</option>
         </select>
     </div>
@@ -104,8 +104,10 @@
                 <div class="panel-body">
                     <div class="input-group">
                         <div class="input-group-addon">Študijný program</div>
-                        <g:textField value="${form?.fieldsVersion?.getAt(version)?.fields?.form_studijny_program}"
-                                     class="form-control" type="text" name="form_studijny_program"/>
+                        <select class="chosen-select form-control" name="form_studijny_program"
+                                id="form_studijny_program">
+                            <option value="">Študijný program</option>
+                        </select>
                     </div>
 
                     <div class="input-group">
@@ -331,30 +333,68 @@
         contentType: "application/json",
         dataType: "json",
         success: function (item) {
-            $("#vysoka_skola").empty();
+            $("#form_vysoka_skola").empty();
             $.each(item, function () {
-                $("#vysoka_skola").append($("<option> </option>").val(this['value']).html(this['label']));
+                $("#form_vysoka_skola").append($("<option> </option>").val(this['value']).html(this['label']));
             });
-            $("#vysoka_skola").trigger("chosen:updated");
+            $("#form_vysoka_skola").trigger("chosen:updated");
         }
     });
 
-    $("#vysoka_skola").change(function () {
+    $("#form_vysoka_skola").change(function () {
         $.ajax({
             type: "GET",
             url: "/Forms/classifierLines/faculty",
             data: {
                 name: 'university_code',
-                value: $("#vysoka_skola").val()
+                value: $("#form_vysoka_skola").val()
             },
             contentType: "application/json",
             dataType: "json",
             success: function (item) {
-                $("#fakulta").empty();
+                $("#form_fakulta").empty();
                 $.each(item, function () {
-                    $("#fakulta").append($("<option> </option>").val(this['value']).html(this['label']));
+                    $("#form_fakulta").append($("<option> </option>").val(this['value']).html(this['label']));
                 });
-                $("#fakulta").trigger("chosen:updated");
+                $("#form_fakulta").trigger("chosen:updated");
+            }
+        });
+    });
+
+    $("#form_fakulta").change(function () {
+        $.ajax({
+            type: "GET",
+            url: "/Forms/classifierLines/study_program",
+            data: {
+                name: 'fakulta_code',
+                value: $("#form_fakulta").val()
+            },
+            contentType: "application/json",
+            dataType: "json",
+            success: function (item) {
+                $("#form_studijny_program").empty();
+                $.each(item, function () {
+                    $("#form_studijny_program").append($("<option> </option>").val(this['value'] + "-" + this['stupenvzdelania_code']).html(this['label'] + " - " + this['stupenvzdelania_code']));
+                });
+                $("#form_studijny_program").trigger("chosen:updated");
+            }
+        });
+    });
+
+    $("#form_studijny_program").change(function () {
+        $.ajax({
+            type: "GET",
+            url: "/Forms/classifierLines/study_level",
+            data: {
+                name: 'code',
+                value: $("#form_studijny_program").val().split("-").pop()
+            },
+            contentType: "application/json",
+            dataType: "json",
+            success: function (item) {
+                $.each(item, function () {
+                    $("#form_stupen_studia").val(this['label']);
+                });
             }
         });
     });
